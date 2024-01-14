@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+
+  notification-service-database:
+    image: 'postgres'
+    container_name: notification-service-database
+    environment:
+      - POSTGRES_USER=notification-service-user
+      - POSTGRES_PASSWORD=notification-service-password
+      - POSTGRES_DB=notification-service-database
+    volumes:
+      - notification-service-database-data:/var/lib/postgresql/data
+    ports:
+      - "49005:5432"
+
+volumes:
+  notification-service-database-data:

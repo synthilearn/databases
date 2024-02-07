@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+
+  workspace-service-database:
+    image: 'postgres'
+    container_name: workspace-service-database
+    environment:
+      - POSTGRES_USER=workspace-service-user
+      - POSTGRES_PASSWORD=workspace-service-password
+      - POSTGRES_DB=workspace-service-database
+    volumes:
+      - notification-service-database-data:/var/lib/postgresql/data
+    ports:
+      - "49006:5432"
+
+volumes:
+  workspace-service-database-data:

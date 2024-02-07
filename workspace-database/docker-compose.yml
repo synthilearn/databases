@@ -10,7 +10,7 @@ services:
       - POSTGRES_PASSWORD=workspace-service-password
       - POSTGRES_DB=workspace-service-database
     volumes:
-      - notification-service-database-data:/var/lib/postgresql/data
+      - workspace-service-database-data:/var/lib/postgresql/data
     ports:
       - "49006:5432"
 

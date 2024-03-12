@@ -12,7 +12,7 @@ services:
     volumes:
       - workarea-service-database-data:/var/lib/postgresql/data
     ports:
-      - "49006:5432"
+      - "49008:5432"
 
 volumes:
   workarea-service-database-data:

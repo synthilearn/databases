@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+
+  workarea-service-database:
+    image: 'postgres'
+    container_name: workarea-service-database
+    environment:
+      - POSTGRES_USER=workarea-service-user
+      - POSTGRES_PASSWORD=workarea-service-password
+      - POSTGRES_DB=workarea-service-database
+    volumes:
+      - workarea-service-database-data:/var/lib/postgresql/data
+    ports:
+      - "49006:5432"
+
+volumes:
+  workarea-service-database-data:

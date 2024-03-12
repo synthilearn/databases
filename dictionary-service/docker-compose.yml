@@ -2,17 +2,17 @@ version: '3.3'
 
 services:
 
-  disctionary-service-database:
+  dictionary-service-database:
     image: 'postgres'
-    container_name: disctionary-service-database
+    container_name: dictionary-service-database
     environment:
-      - POSTGRES_USER=disctionary-service-user
-      - POSTGRES_PASSWORD=disctionary-service-password
-      - POSTGRES_DB=disctionary-service-database
+      - POSTGRES_USER=dictionary-service-user
+      - POSTGRES_PASSWORD=dictionary-service-password
+      - POSTGRES_DB=dictionary-service-database
     volumes:
-      - disctionary-service-database-data:/var/lib/postgresql/data
+      - dictionary-service-database-data:/var/lib/postgresql/data
     ports:
       - "49007:5432"
 
 volumes:
-  disctionary-service-database-data:
+  dictionary-service-database-data:

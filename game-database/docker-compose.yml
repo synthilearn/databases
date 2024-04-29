@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+
+  game-service-database:
+    image: 'postgres'
+    container_name: game-service-database
+    environment:
+      - POSTGRES_USER=game-service-user
+      - POSTGRES_PASSWORD=game-service-password
+      - POSTGRES_DB=game-service-database
+    volumes:
+      - game-service-database-data:/var/lib/postgresql/data
+    ports:
+      - "49009:5432"
+
+volumes:
+  game-service-database-data:
